@@ -115,6 +115,11 @@ export default function Login() {
           Don&apos;t have an account?{' '}
           <Link to="/register" className="text-red-600 hover:underline font-medium">Register</Link>
         </p>
+        {!import.meta.env.VITE_SUPABASE_URL && (
+          <p className="text-center text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mt-4">
+            Demo mode — any email &amp; password will work
+          </p>
+        )}
       </div>
     </div>
   )
